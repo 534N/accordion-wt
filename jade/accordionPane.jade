@@ -1,0 +1,3 @@
+.user-accordion-pane
+	.user-accordion-header(ng-click='toggle()', ng-class='activeClass()') {{title}}
+	.user-accordion-body(ng-if='isOpen', ng-transclude="") 

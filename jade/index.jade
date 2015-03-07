@@ -1,0 +1,15 @@
+extends includes/layout
+
+block content
+	.container(ng-controller='myCtrl')
+		accordion-group
+			accordion-pane(ng-repeat='obj in options', title="{{obj.name}}")
+				accordion-body(template='{{obj.template}}')
+
+
+block scripts
+	//- 
+	//- 
+	script(src="angular.min.js")
+	script(src="angular-animate.min.js")
+	script(src='accordion.js')

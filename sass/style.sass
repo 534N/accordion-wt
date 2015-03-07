@@ -1,0 +1,33 @@
+@import "bourbon/bourbon"
+@import "neat/neat"
+@import "_accordion"
+
+
+html 
+	background-color: #fff
+	font-family: "Open Sans"
+
+	a 
+		text-decoration: none
+
+	body
+		.container 
+			@include outer-container
+		.template
+			.field
+				@include outer-container
+				label 
+					@include span-columns(4)
+					margin-right: 5px
+					font-size: 0.8em
+					margin: 8px
+					color: #888
+				input
+					@include span-columns(5)
+					line-height: 1.8em
+					border: 1px solid #eee
+					outline: none
+					&:focus
+						box-shadow: 0 0 5px rgba(81, 203, 238, 1)
+
+		

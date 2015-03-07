@@ -1,0 +1,39 @@
+.user-accordion-group
+	@include span-columns(8)
+	
+	color: #555
+	.user-accordion-header
+		position: relative
+		z-index: 1
+		background: #26C6CF
+		color: #fff 
+		padding: 5px
+		cursor: pointer
+		opacity: 0.7
+		margin-top: 3px
+		&:hover
+			opacity: 1
+		&.active 
+			// font-weight: bold
+			box-shadow: 1px 2px 3px rgba(0,0,0,0.2)
+
+			opacity: 1
+
+	.user-accordion-body
+		background: #f5f5f5
+		color: #555
+		padding: 5px
+		&.ng-enter
+			@include transition(linear all 1s)
+			max-height: 0
+			opacity: 0
+			&.ng-enter-active
+				max-height: 999px
+				opacity: 1
+		&.ng-leave
+			@include transition(linear all 0s)
+			max-height: 999px
+			opacity: 1
+			&.ng-leave-active
+				max-height: 0
+				opacity: 1
